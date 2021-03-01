@@ -1,9 +1,10 @@
 import React from 'react';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./Player.css";
+
 const Player = (props) => {
-    const { name, salary, img } = props.player;
-    console.log(props.player);
+    const { name, salary, img } = props.playerData;
+    const handleAddPlayer = props.handleAddPlayer;
     return (
         <div className="d-flex flex-row m-3 player-details">
             <div>
@@ -13,7 +14,10 @@ const Player = (props) => {
                 <div>
                     <h3>Name: {name}</h3>
                     <h4>Salary: {salary} TAKA</h4>
-                    <button className="btn btn-primary mt-3">Get Him</button>
+                    <button
+                        onClick={() => handleAddPlayer(props.playerData)}
+                        className="btn btn-primary mt-3"
+                    >Get Him</button>
                 </div>
             </div>
         </div>

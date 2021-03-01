@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import playersData from '../../playersData.json';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Player from './Player';
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
-const PlayersList = () => {
-    const [players, setPlayers] = useState([]);
-    useEffect(() => {
-        setPlayers(playersData);
-    },[])
-    
+const PlayersList = (props) => {
+    const players = props.players;
     return (
         <div>
             {
-                players.map((player) => <Player player={player}></Player>)
+                players.map((player) => 
+                <Player 
+                    handleAddPlayer={props.handleAddPlayer} 
+                    playerData={player}
+                ></Player>)
             }
         </div>
     );
