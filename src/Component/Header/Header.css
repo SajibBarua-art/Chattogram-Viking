@@ -3,3 +3,10 @@
     color: rgb(68, 6, 126);
     margin: 5px;
 }
+.header-style {
+    border: 2px solid crimson;
+    border-radius: 5px;
+}
+.title-style img{
+    width: 180px;
+}

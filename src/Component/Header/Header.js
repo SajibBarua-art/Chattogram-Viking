@@ -4,8 +4,11 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
     return (
-        <div>
-            <h1 className="title-style">Chattogram Viking's Auction Table</h1>
+        <div className="header-style">
+            <h1 className="title-style">
+                <img src="http://www.chittagongvikings.com/wp-content/uploads/2015/11/logo-jpeg.jpg" alt="LOGO"/>
+                Chattogram Vikings 
+            <span style={{fontSize: "25px", color: "black"}}> Team Up</span></h1>
         </div>
     );
 };

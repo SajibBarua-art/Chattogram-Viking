@@ -1,6 +1,8 @@
 import React from 'react';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./Player.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
 
 const Player = (props) => {
     const { name, salary, img } = props.playerData;
@@ -17,7 +19,9 @@ const Player = (props) => {
                     <button
                         onClick={() => handleAddPlayer(props.playerData)}
                         className="btn btn-primary mt-3"
-                    >Get Him</button>
+                    > 
+                    <FontAwesomeIcon icon={faUsers}/> Add to Team
+                    </button>
                 </div>
             </div>
         </div>
